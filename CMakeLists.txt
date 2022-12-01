@@ -32,7 +32,7 @@ add_definitions(--std=c++0x -Wall -Wextra -pedantic)
 
 cs_add_library(${PROJECT_NAME} src/eigen-checks.cc)
 
-if(NOT ARM_LINUX_NINEBOT)
+if(NOT ANDROID_NREAL)
 	find_package (Threads)
 	catkin_add_gtest(test_gtest_near
 		test/test_gtest-near.cc)
